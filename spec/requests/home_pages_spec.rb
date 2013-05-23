@@ -75,7 +75,7 @@ describe "Form pages" do
 	end
 
 	describe "Sign in" do
-		before {visit new_session_url}
+		before {visit signin_path}
 		describe "page elements" do
 			it {should have_selector('input', type: 'text', id: 'username', placeholder: 'username')}
 			it {should have_selector('input', type: 'password', id: 'password', placeholder: 'password')}

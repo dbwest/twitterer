@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	def index
+		@users = User.all
 	end
 	def new
 		@user = User.new
@@ -8,11 +9,10 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		if @user.save
 	      flash[:success] = "yaay"
-	      render 'sign_up'
-		  render user_path(@user.id)
 		else
-		    flash[:error] = "error"
+		  flash[:error] = "error"
 	    end
+	    redirect_to '/users/index'
 	end
 	def show
 	end
