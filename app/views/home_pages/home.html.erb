@@ -1,0 +1,15 @@
+<div class="hero-unit">
+	<div class="row">
+		<h1>Welcome to Twitterer.</h1>
+	</div>
+	<div class="row">
+		<div class="span4 well">
+			<h4>Not registered?</h4>
+			<%= link_to 'Sign up', new_user_url, class: "btn btn-large btn-primary" %>
+		</div>
+		<div class="span4 well">
+			<h4>Already registered?</h4>
+			<%= link_to 'Sign in', "/sessions/new", class: "btn btn-large btn-primary" %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+	<fieldset>
+		<legend>Create your account</legend>
+			<%= f.label :name %>
+			<%= f.text_field :name, placeholder: "First Last" %>
+			<%= f.label :username %>
+			<%= f.text_field :username, placeholder: "username" %>
+			<%= f.label :email %>
+			<%= f.text_field :email, placeholder: "you@yourdomain.com" %>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+			<%= f.label :password_confirmation %>
+			<%= f.password_field :password_confirmation %> <br> <br>
+			<%= f.submit "Create", id: "submit-button", class: "btn btn-large btn-primary" %>
+	</fieldset>
+<% end %>
