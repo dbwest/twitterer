@@ -9,6 +9,7 @@ describe User do
 		it {should respond_to(:username)}
 		it {should respond_to(:email)}
 		it {should respond_to(:password_digest)}
+		it {should respond_to(:authenticate)}
 
 		describe "has a valid name" do
 			it "has a name of max 50 characters" do
@@ -44,6 +45,17 @@ describe User do
 				user.should_not be_valid
 				user.email = ""
 				user.should_not be_valid
+			end
+		end
+
+		describe "log in and authentication" do
+			it "should reject invalid passwords" do
+				password = "bad_password"
+				user.authenticate(password).should be_false
+			end
+			it "should provide a valid user object after positive authentication" do
+				password = user.password
+				user.authenticate(password).should be_valid
 			end
 		end
 
