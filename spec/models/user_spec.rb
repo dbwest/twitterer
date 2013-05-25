@@ -13,6 +13,7 @@ describe User do
 		it {should respond_to(:token)}
 		it {should respond_to(:tweets)}
 		it {should respond_to(:relationships)}
+		
 
 		describe "has a valid name" do
 			it "has a name of max 50 characters" do
