@@ -24,6 +24,9 @@ describe "HomePages" do
 				it {should have_selector('input', type: 'password', id: 'password-confirmation', placeholder: 'confirm your password')}
 				it {should have_selector('input', type: 'button', id: 'submit-button')}
 			end
+			describe "captcha" do
+				pending
+			end
 			describe "on post" do
 				describe "with valid information" do
 					before do
@@ -38,6 +41,7 @@ describe "HomePages" do
 					it "should change user count" do
 						expect{click_button "Create"}.to change(User, :count).by(1)
 					end
+
 				end
 				describe "without valid information" do
 					before do
@@ -55,7 +59,26 @@ describe "HomePages" do
 
 					it "should display an error message" do
 						click_button "Create"
-						page.should have_content("error")
+						page.should have_content("error, invalid information")
+					end
+
+
+
+				end
+				describe "with a duplicate username" do
+					let(:user) {FactoryGirl.create(:user)}
+					before do
+						fill_in "Name", with: user.name
+						fill_in "Username", with: user.username
+						fill_in "Email", with: user.email
+						fill_in "Password", with: user.password
+						fill_in "Password confirmation", with: user.password
+					end 
+
+					it "should show an alert" do
+						click_button "Create"
+						page.should have_content("error, that user is already registered.")
+
 					end
 
 				end
@@ -63,25 +86,14 @@ describe "HomePages" do
 			end
 		end
 
-		describe "Sign in" do
+		describe "Visit Sign In Page" do
 			before {visit signin_path}
 			describe "page elements" do
 				it {should have_selector('input', type: 'text', id: 'username', placeholder: 'username')}
 				it {should have_selector('input', type: 'password', id: 'password', placeholder: 'password')}
 				it {should have_selector('input', type: 'button', id: 'submit-button')}
 			end
-			describe "on post" do
-				describe "with valid username and password" do
-					let (:user) {FactoryGirl.create(:user)}
-					before do
-						fill_in "Username", with: user.username
-						fill_in "Password", with: user.password
-					end
-					it "should redirect to current_user_only page" do
-						click_button "Log In"
-					end
-				end
-			end
+			
 		end
 	end
 

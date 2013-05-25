@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523182047) do
+ActiveRecord::Schema.define(:version => 20130523215437) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_cookie"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(:version => 20130523182047) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+    t.string   "token"
   end
+
+  add_index "users", ["token"], :name => "index_users_on_token"
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end

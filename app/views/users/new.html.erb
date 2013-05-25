@@ -1,5 +1,6 @@
 <%= form_for(@user) do |f| %>
 	<fieldset>
+	<%= render 'shared/error_messages', object: f.object %>
 		<legend>Create your account</legend>
 			<%= f.label :name %>
 			<%= f.text_field :name, placeholder: "First Last" %>

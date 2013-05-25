@@ -1,14 +1,16 @@
 <div class="hero-unit">
-	<div class="row">
+	<div class="row-fluid">
 		<h1>Welcome to Twitterer.</h1>
 	</div>
 	<div class="row">
 		<div class="span4 well">
 			<h4>Not registered?</h4>
+			<p>Create your account today!</p>
 			<%= link_to 'Sign up', new_user_url, class: "btn btn-large btn-primary" %>
 		</div>
 		<div class="span4 well">
 			<h4>Already registered?</h4>
+			<p>Login to see what's new</p>
 			<%= link_to 'Sign in', "/sessions/new", class: "btn btn-large btn-primary" %>
 		</div>
 	</div>

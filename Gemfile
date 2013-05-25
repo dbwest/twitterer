@@ -9,6 +9,12 @@ gem 'mail'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+group :development do
+	gem 'better_errors'
+	gem 'meta_request'
+	gem 'binding_of_caller'
+	gem 'pry-rails'
+end
 
 group :development, :test do
 	gem 'rspec-rails', '2.11.0'

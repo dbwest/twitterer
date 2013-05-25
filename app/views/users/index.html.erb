@@ -1,4 +1,5 @@
-<%= @users.each do |user| %>
-	<h1><%= user.name %></h1>
-	<br>
-<% end %>
+<div class="row-fluid"><%= @users.each do |user| %>
+		<h1><%= link_to user.username, "#" %></h1>
+		<br>
+	<% end %>
+</div>

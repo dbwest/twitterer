@@ -6,7 +6,6 @@ class HomePagesController < ApplicationController
   end
 
   def sign_up
-    redirect_to '/user'
   end
 
   def sign_in

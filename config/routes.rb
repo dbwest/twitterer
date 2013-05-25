@@ -1,9 +1,6 @@
 Twitterer::Application.routes.draw do
   root to: "home_pages#home"
 
-  get "home_pages/sign_up", as: "sign_up"
-  get "home_pages/sign_in", as: "sign_in"
-
   resources :users
   resources :sessions, only: [:create, :new, :destroy]
 
