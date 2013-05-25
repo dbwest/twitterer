@@ -105,6 +105,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     modernizr-rails (2.6.2.1)
+    mousetrap-rails (0.0.9)
     multi_json (1.7.3)
     nokogiri (1.5.9)
     pg (0.12.2)
@@ -212,6 +213,7 @@ DEPENDENCIES
   mail
   meta_request
   modernizr-rails
+  mousetrap-rails
   pg (= 0.12.2)
   pry-rails
   rails (= 3.2.13)
