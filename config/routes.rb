@@ -1,8 +1,10 @@
 Twitterer::Application.routes.draw do
+
   root to: "home_pages#home"
 
   resources :users
   resources :sessions, only: [:create, :new, :destroy]
+  resources :tweets
 
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete

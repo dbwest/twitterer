@@ -6,4 +6,8 @@ FactoryGirl.define do
 		sequence(:password) { "IamAclone"}
 		sequence(:password_confirmation) { "IamAclone"}
 	end
+	factory :tweet do
+		sequence(:tweet) {|n| "Tweet #{n}"}
+		user
+	end
 end
