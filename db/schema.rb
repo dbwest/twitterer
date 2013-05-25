@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130525121503) do
+ActiveRecord::Schema.define(:version => 20130525162710) do
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followeduser_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_cookie"
@@ -35,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130525121503) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "token"
+    t.integer  "favorite_tweets"
   end
 
   add_index "users", ["token"], :name => "index_users_on_token"
