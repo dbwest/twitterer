@@ -1,7 +1,16 @@
 <div class="container">
 	<div class="span3">
 		<p><%= @user.username %></p>
-		<%= render 'tweet_box' %>
+		<% if @user == current_user %>
+			<%= render 'tweet_box' %>
+		<% else %>
+			
+			<%= form_tag("/relationships") do %>
+				
+				<%= submit_tag 'Follow', class: "btn btn-large btn-primary",  data: { keybinding: '[command+enter]' } %>
+			<% end %>
+
+		<% end %>
 	</div>
 	
 	

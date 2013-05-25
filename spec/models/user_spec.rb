@@ -13,7 +13,7 @@ describe User do
 		it {should respond_to(:token)}
 		it {should respond_to(:tweets)}
 		it {should respond_to(:relationships)}
-		
+
 
 		describe "has a valid name" do
 			it "has a name of max 50 characters" do
@@ -66,6 +66,16 @@ describe User do
 			describe "cookie" do
 				its(:token) { should_not be_blank}
 			end
+		end
+
+		describe "following and unfollowing" do
+			let(:other_user) {FactoryGirl.create(:user)}
+			before do
+				user.follow!(other_user)
+			end
+
+			it { should be_following(other_user)}
+
 		end
 
 	end
