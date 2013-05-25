@@ -2,7 +2,7 @@
 	<%= form_tag("/tweets") do %>
 		<%= text_area_tag 'tweet' %>
 		<div>
-			<%= submit_tag 'Post Tweet', class: "btn btn-large btn-primary" %>
+			<%= submit_tag 'Post Tweet', class: "btn btn-large btn-primary",  data: { keybinding: '[enter]' } %>
 		</div>
 	<% end %>
 </div>
