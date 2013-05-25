@@ -1,3 +1,7 @@
 <%= render 'tweet_box' %>
 
 <%= @user.username %>
+
+<% @tweets.each do |tweet| %>
+	<%= tweet.tweet %>
+<% end %>
