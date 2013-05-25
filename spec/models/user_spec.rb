@@ -11,6 +11,7 @@ describe User do
 		it {should respond_to(:password_digest)}
 		it {should respond_to(:authenticate)}
 		it {should respond_to(:token)}
+		it {should respond_to(:tweets)}
 
 		describe "has a valid name" do
 			it "has a name of max 50 characters" do

@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   # http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/
   attr_accessible :email, :name, :username, :password, :password_confirmation
   has_secure_password
+  has_many :tweets
+
   before_save :get_cookie
 
   validates :name, length: {maximum: 50}

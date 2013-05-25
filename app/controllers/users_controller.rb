@@ -25,6 +25,10 @@ class UsersController < ApplicationController
 	end
 	def destroy
 	end
+	
+	def current_user?(user)
+		user == current_user
+	end
 
 	private
 		def signed_in_user
@@ -36,7 +40,8 @@ class UsersController < ApplicationController
 
 		def current_user
 			@user = User.find(params[:id])
-			redirect_to root_path unless current_user?(user)
+			redirect_to root_path unless current_user?(@user)
 		end
+
 
 end
