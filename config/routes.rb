@@ -9,8 +9,6 @@ Twitterer::Application.routes.draw do
   resources :tweets
   resources :relationships
 
-  match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
 
 
   # get "home_pages/about"

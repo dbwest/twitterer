@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username
   # Source for email validation inspiration:
   # http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/
   attr_accessible :email, :name, :username, :password, :password_confirmation, :followed_users, :followers
