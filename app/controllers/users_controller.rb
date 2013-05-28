@@ -27,22 +27,4 @@ class UsersController < ApplicationController
 	def destroy
 	end
 	
-	def current_user?(user)
-		user == current_user
-	end
-
-	private
-		def signed_in_user
-			unless user_signed_in?
-				redirect_to signin_url
-				flash[:notice] = "Please log in first"
-			end
-		end
-
-		def current_user
-			@user = User.find(params[:id])
-			redirect_to root_path unless current_user?(@user)
-		end
-
-
 end
