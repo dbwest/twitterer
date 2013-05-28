@@ -15,9 +15,9 @@
   <%= f.password_field :password %></div>
 
   <div><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %></div>
+  <%= f.password_field :password_confirmation %></div><br>
 
-  <%= recaptcha_tags %>
+  <div class="clearfix"><%= recaptcha_tags %></div><br>
 
   <div><%= f.submit "Sign up", class: "btn btn-large btn-primary" %></div>
 <% end %>

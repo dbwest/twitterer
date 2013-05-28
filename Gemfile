@@ -9,7 +9,7 @@ gem 'mousetrap-rails'
 gem 'turbolinks'
 gem 'pg', '0.12.2'
 gem 'devise'
-	gem 'recaptcha', :require => 'recaptcha/rails'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -49,8 +49,6 @@ group :test do
 	gem 'growl', '1.0.3'
 end
 
-group :production do
-end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
