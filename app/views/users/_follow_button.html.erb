@@ -1,4 +1,4 @@
-<%= form_tag("/relationships", id: "follow_button", remote: true) do %>
+<%= form_tag("/relationships", id: "follow_button") do %>
 	<%= hidden_field_tag :followed_id, @user.id %>
 	<%= submit_tag 'Follow', class: "btn btn-large btn-primary",  data: { keybinding: '[command+enter]' } %>
 <% end %>
