@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
-		  start_session(@user)
 	      redirect_to '/users'
 		else
 		  redirect_to '/users/new'
