@@ -8,6 +8,7 @@ gem 'mail'
 gem 'mousetrap-rails'
 gem 'turbolinks'
 gem 'pg', '0.12.2'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
