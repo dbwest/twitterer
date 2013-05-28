@@ -1,17 +1,5 @@
 require 'spec_helper'
 
 describe Relationship do
-	let(:follower) {FactoryGirl.create(:user)}
-	let(:followed) {FactoryGirl.create(:user)}
-	let(:relationship) {follower.relationships.build(followed_id: followed.id)}
-
-	subject{relationship}
-
-	it {should be_valid}
-
-	it { should respond_to (:follower)}
-	it { should respond_to (:followed)}
-	its(:follower) {should==follower}
-	its(:followed) {should==followed}
-
+  pending "add some examples to (or delete) #{__FILE__}"
 end
