@@ -7,6 +7,7 @@ gem 'faker', '1.0.1'
 gem 'mail'
 gem 'mousetrap-rails'
 gem 'turbolinks'
+gem 'pg', '0.12.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,7 +21,6 @@ end
 
 group :development, :test do
 	gem 'rspec-rails', '2.11.0'
-	gem 'sqlite3'
 	gem 'guard-rspec', '1.2.1'
 	gem 'guard-spork', '1.2.0'
 	gem 'spork', '0.9.2'
@@ -47,9 +47,6 @@ group :test do
 	gem 'growl', '1.0.3'
 end
 
-group :production do
-	gem 'pg', '0.12.2'
-end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
