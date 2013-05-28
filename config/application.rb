@@ -63,5 +63,8 @@ module Twitterer
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    # devise conf needed for heroku
+    config.assets.initialize_on_precompile = false
   end
 end
