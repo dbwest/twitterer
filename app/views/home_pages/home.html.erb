@@ -13,12 +13,12 @@
 			<div class="span4 well">
 				<h4>Not registered?</h4>
 				<p>Create your account today!</p>
-				<%= link_to 'Sign up', new_user_url, class: "btn btn-large btn-primary" %>
+				<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-large btn-primary" %>
 			</div>
 			<div class="span4 well">
 				<h4>Already registered?</h4>
 				<p>Login to see what's new</p>
-				<%= link_to 'Sign in', "/sessions/new", class: "btn btn-large btn-primary" %>
+				<%= link_to 'Sign in', new_user_session_path, class: "btn btn-large btn-primary" %>
 			</div>
 		</div>	
 	</div>
