@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130525163521) do
+ActiveRecord::Schema.define(:version => 20130528181713) do
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -37,15 +37,11 @@ ActiveRecord::Schema.define(:version => 20130525163521) do
     t.integer  "user_id"
     t.string   "username"
     t.string   "name"
-    t.string   "email"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "password_digest"
-    t.string   "token"
     t.integer  "favorite_tweets"
   end
 
-  add_index "users", ["token"], :name => "index_users_on_token"
   add_index "users", ["username"], :name => "index_users_on_username"
 
 end
