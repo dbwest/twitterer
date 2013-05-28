@@ -1,4 +1,12 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
   # Source for email validation inspiration:
   # http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/
   attr_accessible :email, :name, :username, :password, :password_confirmation, :followed_users, :followers
