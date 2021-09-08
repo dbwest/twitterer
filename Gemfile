@@ -15,7 +15,7 @@ gem 'recaptcha', :require => 'recaptcha/rails'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'better_errors'
+	gem 'better_errors', '>= 2.8.0'
 	gem 'meta_request'
 	gem 'binding_of_caller'
 	gem 'pry-rails'
