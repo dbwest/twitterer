@@ -1,21 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.1'
+gem 'rails', '6.1.7.3'
+gem 'bootstrap-sass', '3.4.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
-gem 'mail'
+gem 'mail', '>= 2.5.5'
 gem 'mousetrap-rails'
-gem 'turbolinks'
+gem 'turbolinks', '>= 5.0.0'
 gem 'pg', '0.12.2'
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'better_errors'
+	gem 'better_errors', '>= 2.8.0'
 	gem 'meta_request'
 	gem 'binding_of_caller'
 	gem 'pry-rails'
@@ -31,17 +31,17 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails', '~> 5.0.8'
+  gem 'coffee-rails', '~> 4.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 2.7.2'
   gem 'modernizr-rails'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.4.0'
 
 group :test do
 	gem 'factory_girl_rails', '4.1.0'
