@@ -16,7 +16,7 @@ gem 'recaptcha', :require => 'recaptcha/rails'
 
 group :development do
 	gem 'better_errors'
-	gem 'meta_request'
+	gem 'meta_request', '>= 0.2.6'
 	gem 'binding_of_caller'
 	gem 'pry-rails'
 end
