@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '6.1.7.9'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'mail'
 gem 'mousetrap-rails'
-gem 'turbolinks'
+gem 'turbolinks', '>= 5.0.0'
 gem 'pg', '0.12.2'
 gem 'devise'
 gem 'recaptcha', :require => 'recaptcha/rails'
@@ -31,7 +31,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '~> 6.0.0'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
